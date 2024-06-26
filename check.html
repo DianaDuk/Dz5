@@ -1,0 +1,23 @@
+<script>
+    const numb = prompt('Введіть будь-яке ціле число')
+    const input = parseInt(numb, 10)
+
+    if(isNaN(input)){
+        alert(`Будь ласка, введіть коректне ціле число.`)
+    } else if(input <= 1) {
+        alert(`Число не є простим.`)
+    } else {
+        let Simple = true;
+        for(let i = 2; i <=Math.sqrt(input); i++){
+            if(input % i === 0) {
+                Simple = false;
+                break;
+            }
+        }
+        if(Simple){
+            alert(`Число ${input} є простим.`)
+        }else{
+            alert(`Число ${input} не є простим.`)
+        }
+    }
+</script>
