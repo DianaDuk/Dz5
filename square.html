@@ -1,0 +1,22 @@
+<script>
+        const N = prompt('Введіть ціле число N:');
+        
+        if (N !== null && N.trim() !== '' && !isNaN(N)) {
+            const numb = parseFloat(N);
+            
+            if (Number.isInteger(numb)) {
+                let res = '';
+                for (let i = 1; i <= 100; i++) {
+                    if (i * i <= numb) {
+                        res += i + ' ';
+                    }
+                }
+                alert(`Цілі числа від 1 до 100, квадрат яких не перевищує ${numb}: ${res.trim()}`);
+            } else {
+                alert('Будь ласка, введіть коректне ціле число.');
+            }
+        } else {
+            alert('Будь ласка, введіть коректне ціле число.');
+        }
+
+</script>
